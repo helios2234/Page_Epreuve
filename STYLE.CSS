@@ -1,0 +1,228 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Permet le défilement vertical */
+    background-color: #ffffff;
+}
+body {
+    background-color: #fee440;
+}
+svg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.links {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+a {
+    text-decoration: none;
+    color: black;
+    margin-left: 1em;
+}
+a:hover {
+    text-decoration: underline;
+}
+a img.icon {
+    display: inline-block;
+    height: 1em;
+    margin: 0 0 -0.1em 0.3em;
+}
+
+svg {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 80px; /* Espace pour le footer */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Aligner les éléments vers le haut */
+    position: relative;
+    font-size: 50px;
+    
+    margin-bottom: 30px;
+    width: 100%;
+}
+.propos-box{
+    margin-bottom: 30px;
+    margin-top: 320px;
+    padding: 20px;
+    margin: 5px;
+    height: 50px;
+    width: 800px;
+    height: 150px;
+    overflow: auto;
+}
+.propos-box .p{
+    padding: 5px;
+    margin: 5px;
+    width: 900px;
+    height: 50px;
+    overflow: scroll;
+}
+
+.presentation-box {
+    padding: 10px;
+    width: 900px; /* Réduit la largeur maximale */
+    width: 90%;
+    border-radius: 15px;
+    font-weight: 900;
+    text-align: center;
+    color: #000000;
+    backdrop-filter: blur(15px);
+    background-image: radial-gradient(#ffff, #0000);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    animation: scaleIn 1s ease-in-out forwards;
+    margin-top: 30px; /* Espace inférieur */
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.5); }
+    to { transform: scale(1); }
+}
+
+header {
+    width: 100%;
+    padding: 20px 0;
+    background: linear-gradient(45deg, #db5b05, #0a21ec);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-sizing: border-box;
+    animation: slideInFromTop 1s ease-out forwards;
+}
+
+@keyframes slideInFromTop {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.logo h1 {
+    margin-left: 20px;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    font-size: 1rem;
+}
+
+nav ul li a:hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: white;
+    bottom: -5px;
+    left: 0;
+    animation: linkHover 0.5s ease-in-out forwards;
+}
+
+@keyframes linkHover {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+.propos {
+    padding: 10px 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin: 500px auto;
+    width: 900px; /* Ajusté la taille */
+}
+
+.footer {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #333;
+    color: #FFF;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.contact-info {
+    margin-bottom: 10px;
+}
+
+
+.social-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.social-links ul li {
+    display: inline;
+}
+
+.social-link {
+    color: #FFF;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    color: #eb5b05;
+    transition: color 0.3s ease-in-out;
+}
+
+
+
